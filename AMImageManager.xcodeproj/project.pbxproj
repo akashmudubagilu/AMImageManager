@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		385C1E0D14C24299003D9FFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385C1E0C14C24299003D9FFB /* Foundation.framework */; };
+		385C1E1314C24299003D9FFB /* AMImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C1E1214C24299003D9FFB /* AMImageManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		385C1E0914C24299003D9FFB /* libAMImageManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAMImageManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		385C1E0C14C24299003D9FFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		385C1E1014C24299003D9FFB /* AMImageManager-Prefix.pch */ = {isa = PBXFileReference; path = "AMImageManager-Prefix.pch"; sourceTree = "<group>"; };
+		385C1E1114C24299003D9FFB /* AMImageManager.h */ = {isa = PBXFileReference; path = AMImageManager.h; sourceTree = "<group>"; };
+		385C1E1214C24299003D9FFB /* AMImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMImageManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		385C1E0614C24299003D9FFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				385C1E0D14C24299003D9FFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		385C1DFE14C24299003D9FFB = {
+			isa = PBXGroup;
+			children = (
+				385C1E0E14C24299003D9FFB /* AMImageManager */,
+				385C1E0B14C24299003D9FFB /* Frameworks */,
+				385C1E0A14C24299003D9FFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		385C1E0A14C24299003D9FFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				385C1E0914C24299003D9FFB /* libAMImageManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		385C1E0B14C24299003D9FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				385C1E0C14C24299003D9FFB /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		385C1E0E14C24299003D9FFB /* AMImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				385C1E1114C24299003D9FFB /* AMImageManager.h */,
+				385C1E1214C24299003D9FFB /* AMImageManager.m */,
+				385C1E0F14C24299003D9FFB /* Supporting Files */,
+			);
+			path = AMImageManager;
+			sourceTree = "<group>";
+		};
+		385C1E0F14C24299003D9FFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				385C1E1014C24299003D9FFB /* AMImageManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		385C1E0714C24299003D9FFB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		385C1E0814C24299003D9FFB /* AMImageManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 385C1E1614C24299003D9FFB /* Build configuration list for PBXNativeTarget "AMImageManager" */;
+			buildPhases = (
+				385C1E0514C24299003D9FFB /* Sources */,
+				385C1E0614C24299003D9FFB /* Frameworks */,
+				385C1E0714C24299003D9FFB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMImageManager;
+			productName = AMImageManager;
+			productReference = 385C1E0914C24299003D9FFB /* libAMImageManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		385C1E0014C24299003D9FFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 385C1E0314C24299003D9FFB /* Build configuration list for PBXProject "AMImageManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 385C1DFE14C24299003D9FFB;
+			productRefGroup = 385C1E0A14C24299003D9FFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				385C1E0814C24299003D9FFB /* AMImageManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		385C1E0514C24299003D9FFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				385C1E1314C24299003D9FFB /* AMImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		385C1E1414C24299003D9FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		385C1E1514C24299003D9FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		385C1E1714C24299003D9FFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AMImageManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMImageManager/AMImageManager-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		385C1E1814C24299003D9FFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AMImageManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMImageManager/AMImageManager-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		385C1E0314C24299003D9FFB /* Build configuration list for PBXProject "AMImageManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				385C1E1414C24299003D9FFB /* Debug */,
+				385C1E1514C24299003D9FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		385C1E1614C24299003D9FFB /* Build configuration list for PBXNativeTarget "AMImageManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				385C1E1714C24299003D9FFB /* Debug */,
+				385C1E1814C24299003D9FFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 385C1E0014C24299003D9FFB /* Project object */;
+}
