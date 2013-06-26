@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIkit/UIKit.h>
+#define DIRECTORY_NAME @"ImageCache"
+#define MAXIMUM_FILESYSTEM_SIZE 25000000000 //5MB
 
-@interface AMImageManager : NSObject
+@interface AMImageManager : NSObject		
+ 
 
+- (NSData *)imageWithImageUrl:(NSString *)imageUrl ;
++ (AMImageManager *)sharedInstance ;
+- (NSString *)getCacheDirectoryName ;
+- (void)storeImage:(NSData *)imageData withImageUrl:(NSString *)imageUrl ;
+- (BOOL)checkIfSpaceAvailableForImageOfSize:( long long )imageSize ;
+- (void)createSpaceForImageOfSize:( long long )imageSize;
+- (NSString *)fileNameForImageWithUrl:(NSString *)imageUrl;
 @end
