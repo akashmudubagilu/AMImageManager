@@ -12,7 +12,7 @@
 #import "ImageRequest.h"
 #import "Indicator.h"
 
-@interface AMImageView : UIImageView <ImageRequestProtocol>
+@interface AMImageView : UIImageView 
 {
     UIImage *placeholderImage;
     Indicator *indicator;

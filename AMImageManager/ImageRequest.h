@@ -7,13 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
- 
-@protocol ImageRequestProtocol  
 
--(void)imageResponseRecieved:(NSData *)imageData withUnicId:(id)uniqueId;
--(void)imageRequestFailedWithError:(NSError*)error;
-
-@end
 
 
 @interface ImageRequest : NSObject{
