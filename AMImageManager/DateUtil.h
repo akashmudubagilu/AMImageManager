@@ -1,9 +1,9 @@
 //
 //  DateUtil.h
-//  iPublishCentral
 //  Created by Akash Mudubagilu on 1/22/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
+//  class that defines few date comparison utilities.
 
 #import <Foundation/Foundation.h>
 

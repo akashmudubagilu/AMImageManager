@@ -5,6 +5,8 @@
 //  Created by Akash Mudubagilu on 1/22/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
+//  is the model class for an image that is cached. 
+
 
 #import <Foundation/Foundation.h>
 

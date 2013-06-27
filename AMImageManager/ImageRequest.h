@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ASIHTTPRequest.h"
-
+ 
 @protocol ImageRequestProtocol  
 
 -(void)imageResponseRecieved:(NSData *)imageData withUnicId:(id)uniqueId;
@@ -17,15 +16,19 @@
 @end
 
 
-@interface ImageRequest : ASIHTTPRequest{
+@interface ImageRequest : NSObject{
     
     id uniqueId;
-    id dataDelegate;
-    
+    NSURL  *url;
+     
 }
 
 @property(nonatomic, retain) id uniqueId;
-@property(nonatomic, assign) id dataDelegate;
+@property(nonatomic, retain) NSURL *url;
 
+ 
 - (id)initWithRequestURL:(NSString *)strUrl ;
+-(void)makeRequestWithBlocfForSuccess:(void (^)(NSData *imageData, id uniqId))successBlock failure:(void(^)(NSError *error))FalureBlock;
+
+
 @end

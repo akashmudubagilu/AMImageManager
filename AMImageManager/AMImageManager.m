@@ -38,7 +38,7 @@ static AMImageManager *sharedImageManager = nil;
         NSString *pathOfImage = [[ImageCachingDatabaseService sharedImageCachingDatabaseService] pathNameForImageUrl:imageUrl];
         NSString *resourcePath = [[AMImageManager sharedInstance] getCacheDirectoryName];            //[[NSBundle mainBundle] resourcePath];
         NSString *finalPath = [NSString stringWithFormat:@"%@/%@",resourcePath, pathOfImage];
-        return finalPath;
+        return pathOfImage;
     }
 }
 
@@ -64,6 +64,7 @@ static AMImageManager *sharedImageManager = nil;
 //Store Image in fileSystem,Database,Cache 
 - (void)storeImage:(NSData *)imageData withImageUrl:(NSString *)imageUrl {
     @synchronized(self) {  
+        NSLog(@"saving image in cache");
         long long  imageSize = ( long long )[imageData bytes];
         if(imageUrl != nil) {
             BOOL available = [[AMImageManager sharedInstance] checkIfSpaceAvailableForImageOfSize:imageSize];
@@ -73,12 +74,14 @@ static AMImageManager *sharedImageManager = nil;
             NSString *pathForImage = [[AMImageManager sharedInstance] fileNameForImageWithUrl:imageUrl];
             NSFileManager *fileManager = [NSFileManager defaultManager];
             
+            //pathForImage = [pathForImage lastPathComponent];
+            
             //creating file and storing image in it
             BOOL result = [fileManager createFileAtPath:pathForImage contents:imageData attributes:nil];
             if (result) {
                 //storing image name in database
                 //            NSString *imageName = [imageUrl lastPathComponent];
-                [[ImageCachingDatabaseService sharedImageCachingDatabaseService] insertNewImageWithUrl:imageUrl withSize:imageSize andFilePath:imageUrl];
+                [[ImageCachingDatabaseService sharedImageCachingDatabaseService] insertNewImageWithUrl:imageUrl withSize:imageSize andFilePath:pathForImage];
             }
             
             //storing in the on memory cache
@@ -112,9 +115,9 @@ static AMImageManager *sharedImageManager = nil;
 //Saving FileName
 - (NSString *)fileNameForImageWithUrl:(NSString *)imageUrl {
     @synchronized(self) {  
-        //    NSString *pathNameOfImage = [imageUrl lastPathComponent];
+            NSString *pathNameOfImage = [imageUrl lastPathComponent];
         NSString *resourcePath = [[AMImageManager sharedInstance] getCacheDirectoryName];            //[[NSBundle mainBundle] resourcePath];
-        NSString *finalPath = [NSString stringWithFormat:@"%@/%@",resourcePath, imageUrl];
+        NSString *finalPath = [NSString stringWithFormat:@"%@/%@",resourcePath, pathNameOfImage];
         return finalPath;
     }
 }
@@ -138,6 +141,7 @@ static AMImageManager *sharedImageManager = nil;
     @synchronized(self) {    
         NSData *image = [[AMImageCache sharedInstance] imageWithImageUrl:imageUrl];
         if (image != nil) {
+            NSLog(@"image fetched from cache");
             return image;
         }
         
@@ -146,8 +150,16 @@ static AMImageManager *sharedImageManager = nil;
         NSString *imagePath = [[AMImageManager sharedInstance] pathNameForImageUrl:imageUrl];
         if (imagePath != nil) {
             imageData = [[AMImageManager sharedInstance] imageForPath:imagePath];
+            if (imageData !=  nil) {
+                NSLog(@"image fetched db");
+                [self storeImage:imageData withImageUrl:imageUrl ];
+
+
+            }
+            return imageData;
         }
     }
+    return nil;
 }
 
 

@@ -5,6 +5,7 @@
 //  Created by Akash Mudubagilu on 1/14/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
+//  This class does the actual cache managing job. it creates, handles the cache and also storage of images in the local database.
 
 #import <Foundation/Foundation.h>
 #import <UIkit/UIKit.h>

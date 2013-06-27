@@ -10,8 +10,7 @@
 
 @implementation ImageRequest
 @synthesize uniqueId;
-@synthesize dataDelegate;
-
+@synthesize url;
 
 - (void)dealloc {
     [uniqueId release];
@@ -21,13 +20,31 @@
 
 - (id)initWithRequestURL:(NSString *)strUrl {
     NSURL *imageUrl = [NSURL URLWithString:[strUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    if((self = [super initWithURL:imageUrl]) != nil) {
+    if((self = [super init]) != nil) {
+        	self.uniqueId = strUrl;
+        self.url = imageUrl;
     }
-	self.uniqueId = strUrl;
-    
     return self;
 }
 
+-(void)makeRequestWithBlocfForSuccess:(void (^)(NSData *imageData, id uniqId))successBlock failure:(void(^)(NSError *error))FalureBlock{
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(queue, ^{
+        NSError *error = nil;
+        NSData *data = [[NSData alloc]initWithContentsOfURL:self.url options:NSDataReadingMappedIfSafe error:&error];
+        
+        if(error != nil){
+            FalureBlock(error);
+        }else{
+            successBlock(data, self.uniqueId );
+        }
+    });
+}
+
+
+/*
 - (void)requestFinished {
     
     @synchronized(self) {
@@ -53,6 +70,6 @@
         }
     }
 }
-
+*/
 
 @end

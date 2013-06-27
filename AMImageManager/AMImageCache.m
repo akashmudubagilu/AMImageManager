@@ -70,7 +70,7 @@ static AMImageCache *sharedInstance = nil;
 #pragma mark Cache Methods
 
 //return s the image if it present in the cache else returns nil
-+ (NSData *)imageWithImageUrl:(NSString *)imageUrl {
+- (NSData *)imageWithImageUrl:(NSString *)imageUrl {
     
     if (imageUrl != nil) {
         CacheItem *image = (CacheItem *)[sharedInstance.cacheItems objectForKey:imageUrl];

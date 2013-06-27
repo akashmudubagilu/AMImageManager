@@ -46,6 +46,8 @@
 		385C1E0D14C24299003D9FFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385C1E0C14C24299003D9FFB /* Foundation.framework */; };
 		385C1E1314C24299003D9FFB /* AMImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 385C1E1214C24299003D9FFB /* AMImageManager.m */; };
 		385C1E1A14C242FC003D9FFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385C1E1914C242FC003D9FFB /* UIKit.framework */; };
+		994E7072177CFDAF0008A0DC /* Indicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 994E7070177CFDAE0008A0DC /* Indicator.h */; };
+		994E7073177CFDAF0008A0DC /* Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 994E7071177CFDAF0008A0DC /* Indicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		385C1E1114C24299003D9FFB /* AMImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMImageManager.h; sourceTree = "<group>"; };
 		385C1E1214C24299003D9FFB /* AMImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMImageManager.m; sourceTree = "<group>"; };
 		385C1E1914C242FC003D9FFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		994E7070177CFDAE0008A0DC /* Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indicator.h; sourceTree = "<group>"; };
+		994E7071177CFDAF0008A0DC /* Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Indicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 				3847EF7B14C247BC00C602CC /* AMImageView.m */,
 				3847EF7F14C2564900C602CC /* ImageRequest.h */,
 				3847EF8014C2564900C602CC /* ImageRequest.m */,
+				994E7070177CFDAE0008A0DC /* Indicator.h */,
+				994E7071177CFDAF0008A0DC /* Indicator.m */,
 				385C1E0F14C24299003D9FFB /* Supporting Files */,
 			);
 			path = AMImageManager;
@@ -229,6 +235,7 @@
 				381A4C0814CCD88A00574FDF /* Reachability.h in Headers */,
 				381A4C0C14CCDE5700574FDF /* DateUtil.h in Headers */,
 				381A4C1014CCDE9B00574FDF /* Database.h in Headers */,
+				994E7072177CFDAF0008A0DC /* Indicator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +306,7 @@
 				381A4C0914CCD88A00574FDF /* Reachability.m in Sources */,
 				381A4C0D14CCDE5700574FDF /* DateUtil.m in Sources */,
 				381A4C1114CCDE9B00574FDF /* Database.m in Sources */,
+				994E7073177CFDAF0008A0DC /* Indicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
